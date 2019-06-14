@@ -1,1 +1,36 @@
-
+<html>
+	<head>
+	<title>Any Shortener</title>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+		<style>
+		.txt,p { 
+		font-family: Lato; 
+        }
+		a{
+        text-decoration: none;
+		}
+		</style>
+	</head>
+	<body>
+	<center>
+	<h1 class="txt">Any Shortener</h1>
+	<br><br>
+	<form action="https://anyshortener.herokuapp.com/shortener.php" method="get">
+	<p>Url to shorten: <input type="text" name="url"/>
+	<select name="service">
+    <option value="googl">goo.gl</option>
+    <option value="isgd">is.gd</option>
+    <option value="vgd">v.gd</option>
+    </select></p>
+	<input type="submit" value="Shorten"/>
+	</form>
+	<br><br><br>
+	<p>Any Shortener uses:</p>
+    <p><a href="https://developers.google.com/url-shortener/v1/getting_started" target="_blank">goo.gl's apis</a></p>
+	<p><a href="https://is.gd/apishorteningreference.php" target="_blank">is.gd's apis</a></p>
+	<p><a href="https://v.gd/apishorteningreference.php" target="_blank">v.gd's apis</a></p>
+	<br><br>
+	<p>&copy; 2019 <a href="https://giulio.top" target="_blank">Giulio De Matteis</a></p>
+	</center>
+	</body>
+</html>
