@@ -6,12 +6,16 @@ $msg = "Your shortened url is: ";
 // Apis
 $rebrandlyapi = "";
 
+// Check if url field is blank
 if($url == ""){
+    // Url field is blank, display an error
     $msg = "There was an error, you can't leave the url field blank.";
     $shortened = "";
 }else{
     // Do nothing
 }
+
+// Services
 if($service == "rebrandly"){
   $domain_data["fullName"] = "rebrand.ly";
   $post_data["destination"] = $url;
@@ -40,7 +44,9 @@ if($service == "rebrandly"){
     $shortener = "https://v.gd/create.php?format=simple&url=$url";
     $shortened = file($shortener)[0];
 }else{
-
+	// Display an error
+        $msg = "Error.";
+	$shortened = "";
 }
 ?>
 
