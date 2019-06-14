@@ -3,6 +3,9 @@ $url = $_GET["url"];;
 $service = $_GET["service"];
 $msg = "Your shortened url is: ";
 
+// Apis
+$rebrandlyapi = "";
+
 if($url == ""){
     $msg = "There was an error, you can't leave the url field blank.";
     $shortened = "";
@@ -17,7 +20,7 @@ if($service == "rebrandly"){
   //$post_data["title"] = "Rebrandly YouTube channel";
   $ch = curl_init("https://api.rebrandly.com/v1/links");
   curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-      "apikey: 210bd6f9826b42b9bc335e133195779a",
+      "apikey: $rebrandlyapi",
       "Content-Type: application/json"
   ));
   curl_setopt($ch, CURLOPT_POST, 1);
