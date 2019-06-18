@@ -26,7 +26,7 @@ Any Shortener uses the apis provided by the services:
 
 The next shorteners that will be added are:
 
-- 
+- <a href="http://7th.it/" target="_blank">7th.it</a>
 
 # Requests
 
