@@ -84,8 +84,9 @@ $shortened = $bitly_response->data->url;
 	<p>Any Shortener uses:</p>
 	<p><a href="https://is.gd/apishorteningreference.php" target="_blank">is.gd's apis</a></p>
 	<p><a href="https://v.gd/apishorteningreference.php" target="_blank">v.gd's apis</a></p>
-    <p><a href="https://developers.rebrandly.com/docs" target="_blank">rebrandly's apis</a></p>
-    <p><a href="http://my.dot.tk/tweak/?show=technical" target="_blank">dot.tk's apis</a></p>
+	<p><a href="https://dev.bitly.com/" target="_blank">bitly's apis</a></p>
+        <p><a href="https://developers.rebrandly.com/docs" target="_blank">rebrandly's apis</a></p>
+        <p><a href="http://my.dot.tk/tweak/?show=technical" target="_blank">dot.tk's apis</a></p>
 	<br><br>
 	<p>&copy; 2019 <a href="https://giulio.top" target="_blank">Giulio De Matteis</a></p>
 	</center>
