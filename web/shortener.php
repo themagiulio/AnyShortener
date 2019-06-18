@@ -5,6 +5,8 @@ $msg = "Your shortened url is: ";
 
 // Apis
 $rebrandlyapi = "";
+$bitly_login = "";
+$bitly_apikey = "";
 
 // Check if url field is blank
 if($url == ""){
@@ -43,6 +45,10 @@ if($service == "rebrandly"){
 }elseif($service == "vgd"){
     $shortener = "https://v.gd/create.php?format=simple&url=$url";
     $shortened = file($shortener)[0];
+}elseif($service == "bitly"){
+$long_url = urlencode($url);
+$bitly_response = json_decode(file_get_contents("http://api.bit.ly/v3/shorten?login={$bitly_login}&apiKey={$bitly_apikey}&longUrl={$long_url}&format=json"));
+$shortened = $bitly_response->data->url;
 }else{
 	// Display an error
         $msg = "Error.";
