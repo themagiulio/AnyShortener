@@ -1,4 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿/*
+ 
+Any Shortener is the place where you can find all the shortener at the same time.
+
+Developed by: Giulio De Matteis (https://giulio.top)
+License: MIT License
+
+*/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +82,35 @@ namespace AnyShortener
                         {
                             WebClient myWebClient = new WebClient();
                             string shortener = myWebClient.DownloadString("https://code.giulio.top/dev/anyshortener/rebrandly.php?url=" + url.Text);
+
+                            shorturl.Text = shortener;
+                            panel1.Visible = true;
+                        }
+
+
+                        if (service.Text == "bit.ly")
+                        {
+                            WebClient myWebClient = new WebClient();
+                            string shortener = myWebClient.DownloadString("https://code.giulio.top/dev/anyshortener/bitly.php?url=" + url.Text);
+
+                            shorturl.Text = shortener;
+                            panel1.Visible = true;
+                        }
+
+
+                        if (service.Text == "cutt.ly")
+                        {
+                            WebClient myWebClient = new WebClient();
+                            string shortener = myWebClient.DownloadString("https://code.giulio.top/dev/anyshortener/cuttly.php?url=" + url.Text);
+
+                            shorturl.Text = shortener;
+                            panel1.Visible = true;
+                        }
+
+                        if (service.Text == "7th.it")
+                        {
+                            WebClient myWebClient = new WebClient();
+                            string shortener = myWebClient.DownloadString("https://code.giulio.top/dev/anyshortener/7th.php?url=" + url.Text);
 
                             shorturl.Text = shortener;
                             panel1.Visible = true;

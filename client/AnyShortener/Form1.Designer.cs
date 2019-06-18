@@ -34,11 +34,12 @@
             this.service = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.shorturl = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.shorturl = new System.Windows.Forms.TextBox();
+            this.btn2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,10 @@
             this.service.Items.AddRange(new object[] {
             "is.gd",
             "v.gd",
+            "bit.ly",
             "rebrand.ly",
+            "7th.it",
+            "cutt.ly",
             "dot.tk"});
             this.service.Location = new System.Drawing.Point(123, 38);
             this.service.Name = "service";
@@ -98,29 +102,11 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.shorturl);
             this.panel1.Controls.Add(this.btn2);
-            this.panel1.Location = new System.Drawing.Point(4, 0);
+            this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 73);
             this.panel1.TabIndex = 10;
             this.panel1.Visible = false;
-            // 
-            // btn2
-            // 
-            this.btn2.Location = new System.Drawing.Point(234, 25);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(109, 23);
-            this.btn2.TabIndex = 2;
-            this.btn2.Text = "Shorten another url";
-            this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.Btn2_Click);
-            // 
-            // shorturl
-            // 
-            this.shorturl.Location = new System.Drawing.Point(90, 27);
-            this.shorturl.Name = "shorturl";
-            this.shorturl.ReadOnly = true;
-            this.shorturl.Size = new System.Drawing.Size(130, 20);
-            this.shorturl.TabIndex = 3;
             // 
             // label3
             // 
@@ -131,6 +117,24 @@
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Your url is:";
+            // 
+            // shorturl
+            // 
+            this.shorturl.Location = new System.Drawing.Point(90, 27);
+            this.shorturl.Name = "shorturl";
+            this.shorturl.ReadOnly = true;
+            this.shorturl.Size = new System.Drawing.Size(130, 20);
+            this.shorturl.TabIndex = 3;
+            // 
+            // btn2
+            // 
+            this.btn2.Location = new System.Drawing.Point(234, 25);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(109, 23);
+            this.btn2.TabIndex = 2;
+            this.btn2.Text = "Shorten another url";
+            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.Btn2_Click);
             // 
             // label4
             // 
@@ -152,11 +156,21 @@
             this.linkLabel1.Text = "Github";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(319, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "v1.2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 101);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
@@ -191,6 +205,7 @@
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label5;
     }
 }
 
