@@ -59,6 +59,9 @@ if($service == "rebrandly"){
     $json = file_get_contents("https://cutt.ly/api/api.php?key=".$cuttlyapi."&short=$url");
     $data = json_decode ($json, true);
     $shortened = $data["url"]["shortLink"];
+}elseif($service == "shortest"){
+    $shortener = "https://code.giulio.top/dev/anyshortener/shortest.php?url=$url";
+    $shortened = file($shortener)[0];
 }else{
 	// Display an error
     $msg = "Error.";
@@ -95,10 +98,11 @@ if($service == "rebrandly"){
 	<p><a href="https://is.gd/apishorteningreference.php" target="_blank">is.gd's apis</a></p>
 	<p><a href="https://v.gd/apishorteningreference.php" target="_blank">v.gd's apis</a></p>
 	<p><a href="https://dev.bitly.com/" target="_blank">bitly's apis</a></p>
-    <p><a href="https://developers.rebrandly.com/docs" target="_blank">rebrandly's apis</a></p>
-    <p><a href="http://7th.it/static.php?api" target="_blank">7th's apis</a></p>
-    <p><a href="https://cutt.ly/cuttly-api" target="_blank">cuttly's apis</a></p> 
-    <p><a href="http://my.dot.tk/tweak/?show=technical" target="_blank">dot.tk's apis</a></p>
+        <p><a href="https://developers.rebrandly.com/docs" target="_blank">rebrandly's apis</a></p>
+        <p><a href="http://7th.it/static.php?api" target="_blank">7th's apis</a></p>
+        <p><a href="https://cutt.ly/cuttly-api" target="_blank">cuttly's apis</a></p>
+	<p><a href="https://shorte.st" target="_blank">shortest's apis</a></p>
+	<p><a href="http://my.dot.tk/tweak/?show=technical" target="_blank">dot.tk's apis</a></p>
 	<br><br>
     <a class="github-button" href="https://github.com/themagiulio" data-size="large" aria-label="Follow @themagiulio on GitHub">Follow @themagiulio</a>
     <a class="github-button" href="https://github.com/themagiulio/AnyShortener/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork themagiulio/AnyShortener on GitHub">Fork</a>
