@@ -9,6 +9,7 @@ $bitly_login = "";
 $bitly_apikey = "";
 $seventhapi = "";
 $cuttlyapi = "";
+$shortestapi = "";
 
 // Check if url field is blank
 if($url == ""){
@@ -60,8 +61,15 @@ if($service == "rebrandly"){
     $data = json_decode ($json, true);
     $shortened = $data["url"]["shortLink"];
 }elseif($service == "shortest"){
-    $shortener = "https://code.giulio.top/dev/anyshortener/shortest.php?url=$url";
-    $shortened = file($shortener)[0];
+    $curl_url = "https://api.shorte.st/s/".$shortestapi."/".$url;
+    $ch = curl_init(); 
+    curl_setopt($ch, CURLOPT_URL, $curl_url); 
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+    $result = curl_exec($ch); 
+    curl_close($ch); 
+    $array = json_decode($result);
+    $shortened = $array->shortenedUrl;
 }else{
 	// Display an error
     $msg = "Error.";
