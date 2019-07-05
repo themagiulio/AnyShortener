@@ -17,7 +17,7 @@ Any Shortener supports:
 
 # How does it work?
 
-Any Shortener uses the apis provided by the services:
+Any Shortener uses the apis provided by these services:
 
 - <a href="https://is.gd/apishorteningreference.php" target="_blank">is.gd's apis</a>
 - <a href="https://v.gd/apishorteningreference.php" target="_blank">v.gd's apis</a>
