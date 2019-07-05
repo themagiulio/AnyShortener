@@ -1,4 +1,4 @@
-# Any Shortener
+# <img src="docs/bin/logo.png"/>
 
 All the url shorteners in a unique place.
 
