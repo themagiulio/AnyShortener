@@ -8,3 +8,4 @@ C:\Users\gigig\source\repos\AnyShortener\AnyShortener\obj\Debug\AnyShortener.csp
 C:\Users\gigig\source\repos\AnyShortener\AnyShortener\obj\Debug\AnyShortener.csproj.CoreCompileInputs.cache
 C:\Users\gigig\source\repos\AnyShortener\AnyShortener\obj\Debug\AnyShortener.exe
 C:\Users\gigig\source\repos\AnyShortener\AnyShortener\obj\Debug\AnyShortener.pdb
+C:\Users\gigig\source\repos\AnyShortener\AnyShortener\obj\Debug\AnyShortener.Options.resources

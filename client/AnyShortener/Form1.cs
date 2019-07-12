@@ -1,5 +1,6 @@
 ﻿/*
  
+The spiciest shortener ;)
 Any Shortener is the place where you can find all the shortener at the same time.
 
 Developed by: Giulio De Matteis (https://giulio.top)
@@ -24,10 +25,30 @@ namespace AnyShortener
 {
     public partial class Form1 : Form
     {
+        private string savePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AnyShortener\\";
         public Form1()
         {
             InitializeComponent();
-            url.Text = "http://";
+            url.Text = "http://example.com";
+
+            if (!Directory.Exists(savePath))
+            {
+                Directory.CreateDirectory(savePath);
+            }
+
+
+            if (File.Exists(savePath + "config.ini"))
+            {
+                try
+                {
+                    string defservice = File.ReadLines(savePath + "config.ini").Skip(0).Take(1).First();
+                    service.Text = defservice;
+                }
+                catch { }
+            }
+            else {
+                File.Create(savePath + "config.ini").Close();
+            }
         }
 
         private void Btn_Click(object sender, EventArgs e)
@@ -126,6 +147,15 @@ namespace AnyShortener
                             panel1.Visible = true;
                         }
 
+                        if (service.Text == "shorte.st")
+                        {
+                            WebClient myWebClient = new WebClient();
+                            string shortener = myWebClient.DownloadString("https://code.giulio.top/dev/anyshortener/shortest.php?url=" + url.Text);
+                            url.Text = shortener;
+                            shorturl.Text = url.Lines[0];
+                            panel1.Visible = true;
+                        }
+
                     }
                     catch
                     {
@@ -147,5 +177,31 @@ namespace AnyShortener
             Process.Start("https://github.com/themagiulio/AnyShortener/");
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(shorturl.Text);
+            MessageBox.Show("The shortened url has been copyed to the clipboard.", "Any Shortener", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void DeveloperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Any Shortener is fully developed by Giulio De Matteis. \n\nWebsite: https://giulio.top \nGithub: https://github.com/themagiulio \nInstagram: @themagiulio \nTwitter: @themagiulio \n\nYou can find more info about Any Shortener on my repo: https://github.com/themagiulio/AnyShortener", "Any Shortener - About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void GithubToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            System.Diagnostics.Process.Start("https://github.com/themagiulio/AnyShortener");
+        }
+
+        private void OptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Options frm = new Options();
+            frm.Show();
+        }
+
+        private void APIKeysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Under developing...
+        }
     }
 }
