@@ -38,7 +38,7 @@ if($service == "rebrandly"){
     $result = curl_exec($ch);
     curl_close($ch);
     $response = json_decode($result, true);
-    $shortened = $response["shortUrl"];
+    $shortened = "https://".$response["shortUrl"];
 }elseif($service == "isgd"){
     $shortener = "https://is.gd/create.php?format=simple&url=$url";
     $shortened = file($shortener)[0];
