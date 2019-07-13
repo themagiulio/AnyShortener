@@ -28,6 +28,12 @@ Any Shortener uses the apis provided by these services:
 - <a href="https://shorte.st" target="_blank">shortest's apis</a>
 - <a href="http://my.dot.tk/tweak/?show=technical" target="_blank">dot.tk's apis</a>
 
+# Use Any Shortener on Apple Shortcuts
+
+Any Shortener is now avaliable on Apple Shortcuts.
+
+Check it out on http://bit.ly/2JE72aI 
+
 # Requests
 
 If you have some questions or requests you can mail me at: <a href="mailto:giuliodematteis@icloud.com" target="_blank">giuliodematteis@icloud.com</a>
