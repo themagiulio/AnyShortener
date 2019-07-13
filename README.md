@@ -32,7 +32,7 @@ Any Shortener uses the apis provided by these services:
 
 Any Shortener is now avaliable on Apple Shortcuts.
 
-Check it out on http://bit.ly/2JE72aI 
+Check it out on http://bit.ly/2lbC15k
 
 # Requests
 
