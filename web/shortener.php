@@ -1,5 +1,14 @@
 <?php
-$url = $_GET["url"];;
+$url = $_GET["url"];
+if(filter_var($url, FILTER_VALIDATE_URL))
+{
+   // The text is a url
+}
+else
+{
+   // The text isn't a url
+   $url = urlencode($url);
+}
 $service = $_GET["service"];
 $msg = "Your shortened url is: ";
 
