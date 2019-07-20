@@ -1,13 +1,7 @@
 <?php
 $url = $_GET["url"];
-if(filter_var($url, FILTER_VALIDATE_URL))
-{
-   // The text is a url
-}
-else
-{
-   // The text isn't a url
-   $url = urlencode($url);
+if ((!(substr($url, 0, 7) == 'http://')) && (!(substr($url, 0, 8) == 'https://'))) {
+    $url = 'http://' . $url;
 }
 $service = $_GET["service"];
 $msg = "Your shortened url is: ";
