@@ -6,7 +6,7 @@ Any Shortener client works as the website (https://themagiulio.github.io/AnyShor
 
 You can download the source code from this folder or, if you want, you can download the .exe file here:
 
-<a href="http://bit.ly/2WXD8mf">http://bit.ly/2WXD8mf</a>.
+<a href="http://bit.ly/2WXD8mf">http://bit.ly/2WXD8mf</a>. (It works only on Windows.)
 
 # Requests
 
