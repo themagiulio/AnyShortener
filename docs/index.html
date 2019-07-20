@@ -11,7 +11,26 @@
 		padding: 10px;
 		}
 		a{
-        text-decoration: none;
+        	text-decoration: none;
+		}
+		.alert {
+  		padding: 20px;
+  		background-color: #f44336; /* Red */
+  		color: white;
+  		margin-bottom: 15px;
+		}
+		.closebtn {
+  		margin-left: 15px;
+  		color: white;
+  		font-weight: bold;
+  		float: right;
+  		font-size: 22px;
+  		line-height: 20px;
+  		cursor: pointer;
+  		transition: 0.3s;
+		}
+		.closebtn:hover {
+  		color: black;
 		}
 		</style>
 	</head>
@@ -19,6 +38,10 @@
 	<center>
 	<img class="logo" src="bin/logo.png"/>
 	<br><br>
+	<div class="alert">
+  	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  	It seems that 7th doesen't work properly, so it was temporally removed from Any Shortened.
+	</div> 
 	<form action="https://code.giulio.top/dev/anyshortener/shortener.php" method="get">
 	<p>Url to shorten: <input type="text" name="url" placeholder="https://example.com"/>
 	<select name="service">
@@ -53,5 +76,16 @@
 	<p>&copy; 2019 <a href="https://giulio.top" target="_blank">Giulio De Matteis</a></p>
 	</center>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
+	<script>
+	var close = document.getElementsByClassName("closebtn");
+	var i;
+	for (i = 0; i < close.length; i++) {
+  	close[i].onclick = function(){
+ 	var div = this.parentElement;
+    	div.style.opacity = "0";
+    	setTimeout(function(){ div.style.display = "none"; }, 600);
+  	}
+	}
+	</script>
 	</body>
 </html>
