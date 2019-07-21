@@ -45,6 +45,9 @@ if($service == "rebrandly"){
 }elseif($service == "isgd"){
     $shortener = "https://is.gd/create.php?format=simple&url=$url";
     $shortened = file($shortener)[0];
+}elseif($service == "thelink"){
+    $shortener = "http://thelink.la/api-shorten.php?url=$url";
+    $shortened = file($shortener)[0];
 }elseif($service == "tk"){
     $array = file("http://api.dot.tk/tweak/shorten?long=".$url);
     $shortened = $array[0];
@@ -65,12 +68,12 @@ if($service == "rebrandly"){
     $shortened = $data["url"]["shortLink"];
 }elseif($service == "shortest"){
     $curl_url = "https://api.shorte.st/s/".$shortestapi."/".$url;
-    $ch = curl_init(); 
-    curl_setopt($ch, CURLOPT_URL, $curl_url); 
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-    $result = curl_exec($ch); 
-    curl_close($ch); 
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $curl_url);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
     $array = json_decode($result);
     $shortened = $array->shortenedUrl;
 }else{
@@ -85,8 +88,8 @@ if($service == "rebrandly"){
 	<title>Any Shortener</title>
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
 		<style>
-		.txt,p { 
-		font-family: Lato; 
+		.txt,p {
+		font-family: Lato;
                 }
 		a{
         text-decoration: none;
@@ -98,7 +101,7 @@ if($service == "rebrandly"){
 	<h1 class="txt">Any Shortener</h1>
 	<br><br>
 	<p><?php echo $msg; ?> <a href="<?php echo $shortened; ?>" target="_blank"><?php echo $shortened; ?></a></p>
-        <?php 
+        <?php
     if($service == "tk"){
         echo "<br><br><p>Your .tk domain will work in a few seconds...</p>";
     }else{
