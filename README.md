@@ -1,4 +1,4 @@
-# <img src="docs/bin/logo.png"/>
+# <img src="docs/img/logo.png"/>
 
 All the url shorteners in a unique place.
 
@@ -28,11 +28,24 @@ Any Shortener uses the apis provided by these services:
 - <a href="https://cutt.ly/cuttly-api" target="_blank">cuttly's apis</a>
 - <a href="https://shorte.st" target="_blank">shortest's apis</a>
 
-# Use Any Shortener on Apple Shortcuts
+# AnyShortener API
 
-Any Shortener is now avaliable on Apple Shortcuts.
+Use all the supported shortening services is a unique API!
 
-Check it out on http://bit.ly/2lbC15k
+
+```
+https://codegiuliotop.000webhostapp.com/dev/anyshortener/shortener.php?url=URL&service=SERVICE
+```
+URL is the url which you want to shorten and SERVICE is the shortening service that you want to use.
+
+These are the codes of all the services:
+
+- `isgd` for is.gd
+- `vgd` for v.gd
+- `bitly` for bit.ly
+- `rebrandly` for rebrand.ly
+- `cuttly` for cutt.ly
+- `shortest` for shorte.st
 
 # Requests
 
