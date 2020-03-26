@@ -12,6 +12,8 @@ Any Shortener supports:
 - <a href="https://rebrandly.com" target="_blank">rebrand.ly</a>
 - <a href="https://cutt.ly" target="_blank">cutt.ly</a>
 - <a href="https://shorte.st" target="_blank">shorte.st</a>
+- <a href="https://developers.google.com/chart/infographics/docs/qr_codes" target="_blank">Google QR Code generator</a>
+
 
 No longer supported:
 - <a href="http://7th.it" target="_blank">7th.it</a>
@@ -27,6 +29,7 @@ Any Shortener uses the apis provided by these services:
 - <a href="https://developers.rebrandly.com/docs" target="_blank">rebrandly's apis</a>
 - <a href="https://cutt.ly/cuttly-api" target="_blank">cuttly's apis</a>
 - <a href="https://shorte.st" target="_blank">shortest's apis</a>
+- <a href="https://developers.google.com/chart/infographics/docs/qr_codes" target="_blank">Google's apis</a>
 
 # AnyShortener API
 
