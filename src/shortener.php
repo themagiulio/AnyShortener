@@ -11,7 +11,6 @@ if ((!(substr($url, 0, 7) == 'http://')) && (!(substr($url, 0, 8) == 'https://')
 $rebrandlyapi = "";
 $bitly_login = "";
 $bitly_apikey = "";
-$seventhapi = "";
 $cuttlyapi = "";
 $shortestapi = "";
 
