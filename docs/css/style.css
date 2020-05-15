@@ -1,0 +1,61 @@
+a{
+  color: inherit;
+}
+
+a:hover{
+  color: inherit;
+}
+
+.btn-primary{
+  background-color: #4e73df;
+  border-color: #4e73df;
+}
+
+.btn-primary:hover{
+  background-color: #4e73df;
+  border-color: #4e73df;
+}
+
+.btn.btn-primary:disabled{
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+img{
+  pointer-events: none;
+}
+
+.main{
+  padding-top: 90px;
+  text-align: center;
+}
+
+.menubar{
+  padding-top:20px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  background-color: #4e73df;
+}
+
+.footer{
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: grey;
+}
+
+.close{
+  outline: none !important;
+  box-shadow: none;
+}
+
+h1, h2, h3, h4{
+  font-weight: normal;
+}
+
+.card-img{
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
